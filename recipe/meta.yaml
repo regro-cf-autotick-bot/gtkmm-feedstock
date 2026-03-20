@@ -52,7 +52,7 @@ outputs:
         - xorg-libxi                # [linux]
         - xorg-libxinerama                # [linux]
         - xorg-libxfixes                # [linux]
-        - xorg-librandr                 # [linux]
+        - xorg-libxrandr                 # [linux]
         - xorg-libxrender                # [linux]
         - xorg-libxtst                # [linux]
         - libegl-devel                    # [linux]
