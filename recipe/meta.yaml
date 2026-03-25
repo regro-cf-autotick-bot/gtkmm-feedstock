@@ -37,27 +37,28 @@ outputs:
         - sigcpp-2.0
         - atkmm >=2.24.2
         - cairo
+        - zlib
         - glib
         - atk
         - gdk-pixbuf >=2.35.5
         - pango
         - glib
-        - xorg-libice                # [linux]
+        - xorg-libice               # [linux]
         - xorg-libsm                # [linux]
-        - xorg-libx11                # [linux]
-        - xorg-libxcomposite                # [linux]
-        - xorg-libxcursor                # [linux]
-        - xorg-libxdamage                # [linux]
-        - xorg-libxext                # [linux]
+        - xorg-libx11               # [linux]
+        - xorg-libxcomposite        # [linux]
+        - xorg-libxcursor           # [linux]
+        - xorg-libxdamage           # [linux]
+        - xorg-libxext              # [linux]
         - xorg-libxi                # [linux]
-        - xorg-libxinerama                # [linux]
-        - xorg-libxfixes                # [linux]
-        - xorg-libxrandr                 # [linux]
-        - xorg-libxrender                # [linux]
-        - xorg-libxtst                # [linux]
-        - libegl-devel                    # [linux]
-        - libgl-devel                    # [linux]
-        - xorg-xorgproto                     # [linux]
+        - xorg-libxinerama          # [linux]
+        - xorg-libxfixes            # [linux]
+        - xorg-libxrandr            # [linux]
+        - xorg-libxrender           # [linux]
+        - xorg-libxtst              # [linux]
+        - libegl-devel              # [linux]
+        - libgl-devel               # [linux]
+        - xorg-xorgproto            # [linux]
       run:
         - {{ pin_compatible("pango") }}
         - {{ pin_compatible("glibmm") }}
