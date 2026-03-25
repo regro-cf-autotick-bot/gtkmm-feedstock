@@ -12,7 +12,7 @@ source:
   sha256: 6d71091bcd1863133460d4188d04102810e9123de19706fb656b7bb915b4adc3
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
   run_exports:
     - gtkmm-{{ abi_version }} >={{ version }}
@@ -27,24 +27,9 @@ outputs:
       build:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
+        - {{ stdlib('c') }}
         - make
         - pkg-config
-        - {{ cdt('libice-devel') }}  # [linux]
-        - {{ cdt('libsm-devel') }}  # [linux]
-        - {{ cdt('libx11-devel') }}  # [linux]
-        - {{ cdt('libxcomposite-devel') }}  # [linux]
-        - {{ cdt('libxcursor-devel') }}  # [linux]
-        - {{ cdt('libxdamage-devel') }}  # [linux]
-        - {{ cdt('libxext-devel') }}  # [linux]
-        - {{ cdt('libxi-devel') }}  # [linux]
-        - {{ cdt('libxinerama-devel') }}  # [linux]
-        - {{ cdt('libxfixes-devel') }}  # [linux]
-        - {{ cdt('libxrandr-devel') }}  # [linux]
-        - {{ cdt('libxrender-devel') }}  # [linux]
-        - {{ cdt('libxtst-devel') }}  # [linux]
-        - {{ cdt('mesa-libEGL-devel') }}  # [linux]
-        - {{ cdt('mesa-libGL-devel') }}  # [linux]
-        - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
       host:
         - gtk3 >=3.24.0
         - glibmm >=2.54.0
@@ -53,11 +38,31 @@ outputs:
         - sigcpp-2.0
         - atkmm >=2.24.2
         - cairo
+        # for pc files
+        - zlib
+        # for pc files
+        - expat
         - glib
         - atk
         - gdk-pixbuf >=2.35.5
         - pango
         - glib
+        - xorg-libice               # [linux]
+        - xorg-libsm                # [linux]
+        - xorg-libx11               # [linux]
+        - xorg-libxcomposite        # [linux]
+        - xorg-libxcursor           # [linux]
+        - xorg-libxdamage           # [linux]
+        - xorg-libxext              # [linux]
+        - xorg-libxi                # [linux]
+        - xorg-libxinerama          # [linux]
+        - xorg-libxfixes            # [linux]
+        - xorg-libxrandr            # [linux]
+        - xorg-libxrender           # [linux]
+        - xorg-libxtst              # [linux]
+        - libegl-devel              # [linux]
+        - libgl-devel               # [linux]
+        - xorg-xorgproto            # [linux]
       run:
         - {{ pin_compatible("pango") }}
         - {{ pin_compatible("glibmm") }}
