@@ -37,7 +37,10 @@ outputs:
         - sigcpp-2.0
         - atkmm >=2.24.2
         - cairo
+        # for pc files
         - zlib
+        # for pc files
+        - fontconfig
         - glib
         - atk
         - gdk-pixbuf >=2.35.5
