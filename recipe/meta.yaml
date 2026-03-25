@@ -41,7 +41,7 @@ outputs:
         # for pc files
         - zlib
         # for pc files
-        - fontconfig
+        - expat
         - glib
         - atk
         - gdk-pixbuf >=2.35.5
