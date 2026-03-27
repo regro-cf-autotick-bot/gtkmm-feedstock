@@ -1,5 +1,5 @@
 {% set name = "gtkmm" %}
-{% set version = "3.24.2" %}
+{% set version = "4.0.1" %}
 {% set ver_maj_min = ".".join(version.split(".")[:2]) %}
 {% set abi_version = "3.0" %}
 
@@ -9,10 +9,10 @@ package:
 
 source:
   url: http://ftp.gnome.org/pub/GNOME/sources/gtkmm/{{ ver_maj_min }}/gtkmm-{{ version }}.tar.xz
-  sha256: 6d71091bcd1863133460d4188d04102810e9123de19706fb656b7bb915b4adc3
+  sha256: 8973d9bc7848e02cb2051e05f3ee3a4baffe2feb4af4a5487f0e3132eec03884
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
   run_exports:
     - gtkmm-{{ abi_version }} >={{ version }}
